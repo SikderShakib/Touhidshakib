@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sikder Touhid Shakib | Portfolio</title>
+<meta name="description" content="Portfolio of Sikder Touhid Shakib — Zoology Graduate, Community Leader, SEO & Digital Marketing enthusiast.">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<style>
+  :root{
+    --bg:#0b1120;
+    --bg-alt:#111a2e;
+    --card:#141e33;
+    --text:#e7edf7;
+    --muted:#9fb0c9;
+    --accent:#3b82f6;
+    --accent2:#22d3ee;
+    --border:#22314d;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --radius: 18px;
+  }
+  body.light{
+    --bg:#f5f8ff;
+    --bg-alt:#ffffff;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#5b6b85;
+    --border:#e2e8f5;
+    --shadow: 0 10px 30px rgba(30,64,175,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:background .4s ease,color .4s ease;
+    overflow-x:hidden;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  section{padding:110px 8vw;}
+  .section-tag{
+    display:inline-block;
+    padding:6px 18px;
+    border-radius:30px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#fff;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  .section-title{
+    font-size:clamp(1.8rem,3vw,2.6rem);
+    font-weight:700;
+    margin-bottom:12px;
+  }
+  .section-sub{
+    color:var(--muted);
+    max-width:600px;
+    margin-bottom:50px;
+    font-size:1rem;
+  }
+  .grad-text{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  /* ===== NAVBAR ===== */
+  header{
+    position:fixed;top:0;left:0;width:100%;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 8vw;
+    background:rgba(11,17,32,.7);
+    backdrop-filter:blur(14px);
+    z-index:1000;
+    border-bottom:1px solid var(--border);
+    transition:background .4s;
+  }
+  body.light header{background:rgba(255,255,255,.8);}
+  .logo{font-weight:800;font-size:1.3rem;}
+  .logo span{color:var(--accent2);}
+  nav ul{display:flex;gap:32px;}
+  nav ul li a{
+    font-weight:500;font-size:.95rem;
+    position:relative;
+    padding:4px 0;
+    transition:color .3s;
+  }
+  nav ul li a::after{
+    content:'';position:absolute;bottom:0;left:0;width:0;height:2px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    transition:width .3s;
+  }
+  nav ul li a:hover::after{width:100%;}
+  nav ul li a:hover{color:var(--accent2);}
+  .nav-actions{display:flex;align-items:center;gap:16px;}
+  #themeToggle{
+    background:var(--card);border:1px solid var(--border);
+    width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;color:var(--text);font-size:1rem;
+    transition:.3s;
+  }
+  #themeToggle:hover{border-color:var(--accent2);color:var(--accent2);}
+  .burger{display:none;font-size:1.4rem;cursor:pointer;}
+
+  @media(max-width:850px){
+    nav{
+      position:fixed;top:70px;right:-100%;
+      background:var(--bg-alt);
+      width:70%;height:100vh;
+      flex-direction:column;
+      transition:right .4s ease;
+      border-left:1px solid var(--border);
+    }
+    nav.active{right:0;}
+    nav ul{flex-direction:column;padding:40px;gap:26px;}
+    .burger{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:40px;
+    padding-top:140px;
+    position:relative;
+  }
+  .hero::before{
+    content:'';position:absolute;top:-100px;right:-100px;
+    width:400px;height:400px;border-radius:50%;
+    background:radial-gradient(circle,rgba(59,130,246,.25),transparent 70%);
+    filter:blur(40px);z-index:0;
+  }
+  .hero-text{flex:1;z-index:1;min-width:300px;}
+  .hero-text .hi{
+    color:var(--accent2);font-weight:600;letter-spacing:2px;
+    text-transform:uppercase;font-size:.9rem;margin-bottom:14px;display:block;
+  }
+  .hero-text h1{
+    font-size:clamp(2.2rem,5vw,3.6rem);
+    font-weight:800;line-height:1.15;margin-bottom:16px;
+  }
+  .hero-text h2{
+    font-size:1.3rem;color:var(--muted);font-weight:500;margin-bottom:20px;
+    min-height:30px;
+  }
+  .hero-text h2 #typed{color:var(--accent2);font-weight:600;}
+  .hero-text p{color:var(--muted);max-width:520px;margin-bottom:34px;line-height:1.7;}
+  .btn-group{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{
+    padding:14px 30px;border-radius:12px;font-weight:600;font-size:.95rem;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:.3s;cursor:pointer;border:none;
+  }
+  .btn-primary{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 8px 20px rgba(59,130,246,.35);
+  }
+  .btn-primary:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(59,130,246,.5);}
+  .btn-outline{
+    border:1px solid var(--border);color:var(--text);background:transparent;
+  }
+  .btn-outline:hover{border-color:var(--accent2);color:var(--accent2);transform:translateY(-4px);}
+  .socials{display:flex;gap:14px;}
+  .socials a{
+    width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    transition:.3s;
+  }
+  .socials a:hover{background:linear-gradient(90deg,var(--accent),var(--accent2));border-color:transparent;color:#fff;transform:translateY(-4px);}
+
+  .hero-img{
+    flex:0 0 340px;position:relative;z-index:1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-img .ring{
+    width:340px;height:340px;border-radius:50%;
+    background:conic-gradient(from 0deg,var(--accent),var(--accent2),var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    animation:spin 8s linear infinite;
+    padding:6px;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .hero-img img{
+    width:100%;height:100%;object-fit:cover;border-radius:50%;
+    border:6px solid var(--bg);
+    background:var(--bg-alt);
+  }
+  .hero-img .badge{
+    position:absolute;bottom:10px;right:10px;
+    background:var(--card);border:1px solid var(--border);
+    padding:10px 16px;border-radius:14px;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;
+  }
+  .hero-img .badge i{color:#22c55e;}
+
+  .scroll-down{
+    position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+    color:var(--muted);font-size:1.4rem;animation:bounce 2s infinite;
+  }
+  @keyframes bounce{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,-10px);}}
+
+  /* ===== STATS ===== */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+    background:var(--bg-alt);
+    padding:60px 8vw;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .stat-item{text-align:center;}
+  .stat-item h3{
+    font-size:2.4rem;font-weight:800;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .stat-item p{color:var(--muted);margin-top:6px;font-size:.9rem;}
+  @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr);}}
+
+  /* ===== ABOUT ===== */
+  .about-wrap{display:flex;gap:60px;flex-wrap:wrap;align-items:center;}
+  .about-card{
+    flex:1;min-width:280px;
+    background:var(--card);border:1px solid var(--border);
+    padding:40px;border-radius:var(--radius);box-shadow:var(--shadow);
+  }
+  .about-card p{color:var(--muted);line-height:1.8;margin-bottom:20px;}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .info-grid div{font-size:.9rem;}
+  .info-grid span{color:var(--muted);display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;}
+  .info-grid strong{color:var(--text);}
+
+  /* ===== SKILLS ===== */
+  .skills-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+  }
+  .skill-card{
+    background:var(--card);border:1px solid var(--border);
+    padding:28px;border-radius:var(--radius);
+    transition:.35s;
+  }
+  .skill-card:hover{transform:translateY(-8px);border-color:var(--accent2);box-shadow:var(--shadow);}
+  .skill-card i{
+    font-size:1.6rem;margin-bottom:14px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .skill-card h4{margin-bottom:10px;font-size:1.05rem;}
+  .bar{height:7px;border-radius:10px;background:var(--border);overflow:hidden;}
+  .bar span{
+    display:block;height:100%;border-radius:10px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    width:0%;transition:width 1.4s ease;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline{position:relative;max-width:800px;margin:0 auto;}
+  .timeline::before{
+    content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;
+    background:linear-gradient(var(--accent),var(--accent2));
+  }
+  .t-item{position:relative;padding-left:60px;margin-bottom:44px;}
+  .t-item::before{
+    content:'';position:absolute;left:11px;top:4px;
+    width:20px;height:20px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--accent2);
+  }
+  .t-item .date{
+    display:inline-block;background:var(--card);border:1px solid var(--border);
+    padding:4px 14px;border-radius:20px;font-size:.78rem;color:var(--accent2);
+    margin-bottom:10px;font-weight:600;
+  }
+  .t-item h4{font-size:1.15rem;margin-bottom:4px;}
+  .t-item h5{font-size:.92rem;color:var(--muted);font-weight:500;margin-bottom:10px;}
+  .t-item ul{margin-left:0;}
+  .t-item ul li{
+    color:var(--muted);font-size:.92rem;line-height:1.7;
+    position:relative;padding-left:18px;margin-bottom:4px;
+  }
+  .t-item ul li::before{
+    content:'▹';position:absolute;left:0;color:var(--accent2);
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:26px;
+  }
+  .project-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--radius);overflow:hidden;
+    transition:.35s;position:relative;
+  }
+  .project-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--accent2);}
+  .project-thumb{
+    height:170px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:flex;align-items:center;justify-content:center;
+    font-size:2.4rem;color:#fff;opacity:.9;
+  }
+  .project-body{padding:24px;}
+  .project-body h4{margin-bottom:8px;}
+  .project-body p{color:var(--muted);font-size:.88rem;margin-bottom:16px;line-height:1.6;}
+  .project-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .project-tags span{
+    font-size:.72rem;background:var(--bg);border:1px solid var(--border);
+    padding:4px 10px;border-radius:20px;color:var(--muted);
+  }
+  .project-link{font-size:.85rem;font-weight:600;color:var(--accent2);}
+  .project-card.placeholder{
+    display:flex;align-items:center;justify-content:center;
+    border-style:dashed;min-height:260px;color:var(--muted);text-align:center;
+    padding:24px;font-size:.9rem;
+  }
+
+  /* ===== LANG / INTERESTS ===== */
+  .split-two{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  @media(max-width:700px){.split-two{grid-template-columns:1fr;}}
+  .mini-card{
+    background:var(--card);border:1px solid var(--border);
+    padding:30px;border-radius:var(--radius);
+  }
+  .mini-card h4{margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .lang-row{display:flex;justify-content:space-between;margin-bottom:14px;font-size:.9rem;}
+  .interest-list{display:flex;gap:14px;flex-wrap:wrap;}
+  .interest-list span{
+    background:var(--bg);border:1px solid var(--border);padding:10px 16px;
+    border-radius:12px;font-size:.85rem;display:flex;align-items:center;gap:8px;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;}
+  @media(max-width:850px){.contact-wrap{grid-template-columns:1fr;}}
+  .contact-info .c-item{
+    display:flex;align-items:center;gap:16px;
+    padding:18px 0;border-bottom:1px solid var(--border);
+  }
+  .contact-info .c-item i{
+    width:46px;height:46px;border-radius:12px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;
+  }
+  .contact-info .c-item span{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;}
+  .contact-info .c-item strong{font-size:.95rem;}
+
+  form{background:var(--card);border:1px solid var(--border);padding:34px;border-radius:var(--radius);}
+  form input, form textarea{
+    width:100%;padding:14px;margin-bottom:18px;border-radius:10px;
+    background:var(--bg);border:1px solid var(--border);color:var(--text);
+    font-family:inherit;font-size:.92rem;
+  }
+  form input:focus, form textarea:focus{outline:none;border-color:var(--accent2);}
+  form button{width:100%;justify-content:center;}
+
+  /* ===== FOOTER ===== */
+  footer{
+    text-align:center;padding:40px 8vw;border-top:1px solid var(--border);
+    color:var(--muted);font-size:.85rem;
+  }
+  footer .foot-socials{display:flex;justify-content:center;gap:16px;margin-bottom:16px;}
+  footer .foot-socials a{
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;transition:.3s;
+  }
+  footer .foot-socials a:hover{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;}
+  .update-tag{
+    display:inline-block;margin-top:10px;font-size:.75rem;
+    background:var(--card);border:1px solid var(--border);
+    padding:4px 14px;border-radius:20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">Touhid<span>.dev</span></div>
+  <nav id="nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav-actions">
+    <div id="themeToggle"><i class="fa-solid fa-moon"></i></div>
+    <div class="burger" id="burger"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-text" data-aos="fade-right">
+    <span class="hi">👋 Welcome to my portfolio</span>
+    <h1>Sikder Touhid <span class="grad-text">Shakib</span></h1>
+    <h2>I'm a <span id="typed"></span></h2>
+    <p>Dedicated Zoology graduate with strong leadership experience in managing large online educational communities. Proven expertise in team coordination, content strategy, digital project development, and SEO.</p>
+    <div class="btn-group">
+      <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+      <a href="#" class="btn btn-outline" id="downloadCv"><i class="fa-solid fa-download"></i> Download CV</a>
+    </div>
+    <div class="socials">
+      <a href="mailto:touhidshakib4@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:+8801715550210"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+  <div class="hero-img" data-aos="fade-left">
+    <div class="ring">
+      <img src="assets/profile.jpg" alt="Sikder Touhid Shakib">
+    </div>
+    <div class="badge"><i class="fa-solid fa-circle"></i> Open to work</div>
+  </div>
+  <a href="#about" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="stat-item" data-aos="zoom-in"><h3 class="counter" data-target="200000">0</h3><p>Students Reached</p></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="100"><h3 class="counter" data-target="30">0</h3><p>Team Members Led</p></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="200"><h3 class="counter" data-target="3">0</h3><p>Certifications</p></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="300"><h3 class="counter" data-target="4">0</h3><p>Years Experience</p></div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <span class="section-tag" data-aos="fade-up">About Me</span>
+  <h2 class="section-title" data-aos="fade-up">Get to know <span class="grad-text">who I am</span></h2>
+  <p class="section-sub" data-aos="fade-up">A quick overview of my background, values and what drives me every day.</p>
+
+  <div class="about-wrap">
+    <div class="about-card" data-aos="fade-right">
+      <p>I'm a Zoology graduate with a passion for community leadership and digital growth. As Chief Coordinator of a large online educational platform, I've led a 30-member team supporting over 200,000 students — coordinating academic resources, resolving technical issues, and managing sponsorships for non-profit programs.</p>
+      <p>Beyond education, I bring hands-on skills in SEO, digital marketing, and office administration tools, always aiming to bridge academic knowledge with real-world digital impact.</p>
+      <div class="info-grid">
+        <div><span>Name</span><strong>Sikder Touhid Shakib</strong></div>
+        <div><span>Email</span><strong>touhidshakib4@gmail.com</strong></div>
+        <div><span>Phone</span><strong>+8801715-550210</strong></div>
+        <div><span>Location</span><strong>Tangail, Dhaka</strong></div>
+        <div><span>Degree</span><strong>B.Sc. in Life Science</strong></div>
+        <div><span>Status</span><strong>Available for Work</strong></div>
+      </div>
+    </div>
+    <div class="about-card" data-aos="fade-left">
+      <h4 style="margin-bottom:16px;">🎯 What I Bring</h4>
+      <p>✔ Leadership managing 200,000+ member community</p>
+      <p>✔ Strong problem-solving & critical thinking</p>
+      <p>✔ SEO & digital marketing knowledge</p>
+      <p>✔ Advanced MS Office & documentation skills</p>
+      <p style="margin-bottom:0;">✔ Clear professional communication (email, Zoom, Meet)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" style="background:var(--bg-alt);">
+  <span class="section-tag" data-aos="fade-up">Skills</span>
+  <h2 class="section-title" data-aos="fade-up">Things I'm <span class="grad-text">good at</span></h2>
+  <p class="section-sub" data-aos="fade-up">A mix of leadership, technical, and marketing skills built through real experience.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="fade-up"><i class="fa-solid fa-users-gear"></i><h4>Leadership & Management</h4><div class="bar"><span data-width="95"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-file-word"></i><h4>Microsoft Office (Word, Excel)</h4><div class="bar"><span data-width="90"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="160"><i class="fa-solid fa-bullhorn"></i><h4>Digital Marketing</h4><div class="bar"><span data-width="80"></span></div></div>
+    <div class="skill-card" data-aos="fade-up"><i class="fa-solid fa-magnifying-glass-chart"></i><h4>SEO (On-page & Technical)</h4><div class="bar"><span data-width="85"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-brain"></i><h4>Critical Thinking</h4><div class="bar"><span data-width="90"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="160"><i class="fa-solid fa-puzzle-piece"></i><h4>Problem Solving</h4><div class="bar"><span data-width="88"></span></div></div>
+    <div class="skill-card" data-aos="fade-up"><i class="fa-solid fa-envelope-open-text"></i><h4>Professional Email Writing</h4><div class="bar"><span data-width="92"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-video"></i><h4>Zoom / Google Meet</h4><div class="bar"><span data-width="90"></span></div></div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <span class="section-tag" data-aos="fade-up">Education</span>
+  <h2 class="section-title" data-aos="fade-up">My <span class="grad-text">academic journey</span></h2>
+  <p class="section-sub" data-aos="fade-up">From secondary school to university, here's my educational path.</p>
+
+  <div class="timeline">
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2019 - 2023</span>
+      <h4>Bachelor of Life Science</h4>
+      <h5>Government Saadat College (National University), Tangail</h5>
+      <ul><li>CGPA: 3.29 (Official session 2019–2023; completion delayed to 2025 due to academic calendar adjustments)</li></ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2017 - 2019</span>
+      <h4>Higher Secondary Certificate (HSC)</h4>
+      <h5>Major General Mahmudul Hasan Adarsha College, Tangail</h5>
+      <ul><li>GPA: 4.08 out of 5.00 (Science group with Higher Mathematics)</li></ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2012 - 2017</span>
+      <h4>Secondary School Certificate (SSC)</h4>
+      <h5>Velayet Hossain Buhumukhi High School, Tangail</h5>
+      <ul><li>GPA: 5.00 out of 5.00 (Science group)</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" style="background:var(--bg-alt);">
+  <span class="section-tag" data-aos="fade-up">Experience</span>
+  <h2 class="section-title" data-aos="fade-up">Where I've <span class="grad-text">made an impact</span></h2>
+  <p class="section-sub" data-aos="fade-up">Leadership roles and technical programs that shaped my professional skills.</p>
+
+  <div class="timeline">
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2022 - Present</span>
+      <h4>Chief Coordinator</h4>
+      <h5>Zoology Educational Platform (Remote)</h5>
+      <ul>
+        <li>Led a 30-member team managing a 200,000+ student learning community.</li>
+        <li>Coordinated creation and distribution of academic resources and exam updates for Zoology students.</li>
+        <li>Resolved daily operational and technical issues to maintain platform quality.</li>
+        <li>Managed sponsorships for non-profit educational programs.</li>
+      </ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2022</span>
+      <h4>Search Engine Optimization (3-month program)</h4>
+      <h5>Khalid Farhan Passive Journal</h5>
+      <ul>
+        <li>Keyword research for organic traffic.</li>
+        <li>On-page SEO: meta tags, headings, content optimisation.</li>
+        <li>Technical SEO: site speed, mobile-friendliness, indexing.</li>
+        <li>Analytics with Google Search Console, Semrush, Moz.</li>
+      </ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2021</span>
+      <h4>Database Programming (6-month program)</h4>
+      <ul>
+        <li>Advanced MS Office: Word (formatting & layout), Excel (data analysis, formulas), PowerPoint (professional presentations).</li>
+        <li>Proficient in Zoom, Google Meet, and professional email communication.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <span class="section-tag" data-aos="fade-up">Projects</span>
+  <h2 class="section-title" data-aos="fade-up">Recent <span class="grad-text">work & initiatives</span></h2>
+  <p class="section-sub" data-aos="fade-up">Updated monthly — here's what I've been building lately.</p>
+
+  <div class="projects-grid">
+    <!-- PROJECTS: duplicate this block to add a new project card -->
+    <div class="project-card" data-aos="fade-up">
+      <div class="project-thumb"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="project-body">
+        <h4>Zoology Learning Community</h4>
+        <p>Managing a 200,000+ member educational platform providing exam resources and academic support.</p>
+        <div class="project-tags"><span>Leadership</span><span>Education</span><span>Community</span></div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+    </div>
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-thumb"><i class="fa-solid fa-chart-line"></i></div>
+      <div class="project-body">
+        <h4>SEO Growth Case Study</h4>
+        <p>Applied on-page & technical SEO strategies to improve organic reach during a 3-month program.</p>
+        <div class="project-tags"><span>SEO</span><span>Analytics</span></div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+    </div>
+    <!-- PLACEHOLDER: replace this card with your next monthly update -->
+    <div class="project-card placeholder" data-aos="fade-up" data-aos-delay="200">
+      <div>
+        <i class="fa-solid fa-plus" style="font-size:1.8rem;margin-bottom:10px;display:block;"></i>
+        New project coming next update 🚀
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LANGUAGES & INTERESTS ===== -->
+<section style="background:var(--bg-alt);">
+  <span class="section-tag" data-aos="fade-up">Extras</span>
+  <h2 class="section-title" data-aos="fade-up">Languages & <span class="grad-text">Interests</span></h2>
+
+  <div class="split-two">
+    <div class="mini-card" data-aos="fade-right">
+      <h4><i class="fa-solid fa-language"></i> Languages</h4>
+      <div class="lang-row"><span>Bengali</span><strong>Native</strong></div>
+      <div class="bar" style="margin-bottom:18px;"><span data-width="100"></span></div>
+      <div class="lang-row"><span>English</span><strong>Good</strong></div>
+      <div class="bar"><span data-width="75"></span></div>
+    </div>
+    <div class="mini-card" data-aos="fade-left">
+      <h4><i class="fa-solid fa-heart"></i> Interests</h4>
+      <div class="interest-list">
+        <span><i class="fa-solid fa-film"></i> Documentaries</span>
+        <span><i class="fa-solid fa-chess"></i> Chess</span>
+        <span><i class="fa-solid fa-futbol"></i> Football</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <span class="section-tag" data-aos="fade-up">Contact</span>
+  <h2 class="section-title" data-aos="fade-up">Let's <span class="grad-text">work together</span></h2>
+  <p class="section-sub" data-aos="fade-up">Have an opportunity or just want to say hi? Reach out anytime.</p>
+
+  <div class="contact-wrap">
+    <div class="contact-info" data-aos="fade-right">
+      <div class="c-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div><span>Email</span><strong>touhidshakib4@gmail.com</strong></div>
+      </div>
+      <div class="c-item">
+        <i class="fa-solid fa-phone"></i>
+        <div><span>Phone</span><strong>+8801715-550210</strong></div>
+      </div>
+      <div class="c-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div><span>Location</span><strong>Tangail Sadar-1900, Dhaka</strong></div>
+      </div>
+      <div class="c-item" style="border-bottom:none;">
+        <i class="fa-brands fa-github"></i>
+        <div><span>GitHub</span><strong>github.com/yourusername</strong></div>
+      </div>
+    </div>
+
+    <form data-aos="fade-left" onsubmit="return handleForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject">
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-socials">
+    <a href="mailto:touhidshakib4@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="tel:+8801715550210"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+  <p>© <span id="year"></span> Sikder Touhid Shakib. All rights reserved.</p>
+  <span class="update-tag">🔄 Last updated: <span id="lastUpdated">June 2024</span></span>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true });
+
+  // Typing effect
+  new Typed('#typed', {
+    strings: ['Zoology Graduate', 'Community Leader', 'SEO Specialist', 'Digital Marketer'],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+  });
+
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    themeToggle.innerHTML = document.body.classList.contains('light')
+      ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  });
+
+  // Mobile nav
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  burger.addEventListener('click', () => nav.classList.toggle('active'));
+  document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('active')));
+
+  // Animated skill bars
+  const bars = document.querySelectorAll('.bar span');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.dataset.width + '%';
+      }
+    });
+  }, { threshold: 0.4 });
+  bars.forEach(b => barObserver.observe(b));
+
+  // Animated counters
+  const counters = document.querySelectorAll('.counter');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = +el.dataset.target;
+        let count = 0;
+        const step = Math.max(target / 100, 1);
+        const update = () => {
+          count += step;
+          if (count < target) {
+            el.textContent = Math.ceil(count).toLocaleString();
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = target.toLocaleString() + '+';
+          }
+        };
+        update();
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(c => counterObserver.observe(c));
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Simple contact form handler (replace with Formspree/EmailJS for real sending)
+  function handleForm(e){
+    e.preventDefault();
+    alert('Thanks for reaching out! I will get back to you soon 🙌\n(Connect this form to Formspree/EmailJS to receive real emails.)');
+    e.target.reset();
+    return false;
+  }
+
+  // Download CV button (point to your actual CV file in the repo)
+  document.getElementById('downloadCv').addEventListener('click', function(e){
+    e.preventDefault();
+    window.location.href = 'assets/Touhid_Shakib_CV.pdf';
+  });
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sikder Touhid Shakib | Portfolio</title>
+<meta name="description" content="Portfolio of Sikder Touhid Shakib — Zoology Graduate, Community Leader, SEO & Digital Marketing enthusiast.">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<style>
+  :root{
+    --bg:#0b1120;
+    --bg-alt:#111a2e;
+    --card:#141e33;
+    --text:#e7edf7;
+    --muted:#9fb0c9;
+    --accent:#3b82f6;
+    --accent2:#22d3ee;
+    --border:#22314d;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --radius: 18px;
+  }
+  body.light{
+    --bg:#f5f8ff;
+    --bg-alt:#ffffff;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#5b6b85;
+    --border:#e2e8f5;
+    --shadow: 0 10px 30px rgba(30,64,175,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:background .4s ease,color .4s ease;
+    overflow-x:hidden;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  section{padding:110px 8vw;}
+  .section-tag{
+    display:inline-block;
+    padding:6px 18px;
+    border-radius:30px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#fff;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  .section-title{
+    font-size:clamp(1.8rem,3vw,2.6rem);
+    font-weight:700;
+    margin-bottom:12px;
+  }
+  .section-sub{
+    color:var(--muted);
+    max-width:600px;
+    margin-bottom:50px;
+    font-size:1rem;
+  }
+  .grad-text{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  /* ===== NAVBAR ===== */
+  header{
+    position:fixed;top:0;left:0;width:100%;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 8vw;
+    background:rgba(11,17,32,.7);
+    backdrop-filter:blur(14px);
+    z-index:1000;
+    border-bottom:1px solid var(--border);
+    transition:background .4s;
+  }
+  body.light header{background:rgba(255,255,255,.8);}
+  .logo{font-weight:800;font-size:1.3rem;}
+  .logo span{color:var(--accent2);}
+  nav ul{display:flex;gap:32px;}
+  nav ul li a{
+    font-weight:500;font-size:.95rem;
+    position:relative;
+    padding:4px 0;
+    transition:color .3s;
+  }
+  nav ul li a::after{
+    content:'';position:absolute;bottom:0;left:0;width:0;height:2px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    transition:width .3s;
+  }
+  nav ul li a:hover::after{width:100%;}
+  nav ul li a:hover{color:var(--accent2);}
+  .nav-actions{display:flex;align-items:center;gap:16px;}
+  #themeToggle{
+    background:var(--card);border:1px solid var(--border);
+    width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;color:var(--text);font-size:1rem;
+    transition:.3s;
+  }
+  #themeToggle:hover{border-color:var(--accent2);color:var(--accent2);}
+  .burger{display:none;font-size:1.4rem;cursor:pointer;}
+
+  @media(max-width:850px){
+    nav{
+      position:fixed;top:70px;right:-100%;
+      background:var(--bg-alt);
+      width:70%;height:100vh;
+      flex-direction:column;
+      transition:right .4s ease;
+      border-left:1px solid var(--border);
+    }
+    nav.active{right:0;}
+    nav ul{flex-direction:column;padding:40px;gap:26px;}
+    .burger{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:40px;
+    padding-top:140px;
+    position:relative;
+  }
+  .hero::before{
+    content:'';position:absolute;top:-100px;right:-100px;
+    width:400px;height:400px;border-radius:50%;
+    background:radial-gradient(circle,rgba(59,130,246,.25),transparent 70%);
+    filter:blur(40px);z-index:0;
+  }
+  .hero-text{flex:1;z-index:1;min-width:300px;}
+  .hero-text .hi{
+    color:var(--accent2);font-weight:600;letter-spacing:2px;
+    text-transform:uppercase;font-size:.9rem;margin-bottom:14px;display:block;
+  }
+  .hero-text h1{
+    font-size:clamp(2.2rem,5vw,3.6rem);
+    font-weight:800;line-height:1.15;margin-bottom:16px;
+  }
+  .hero-text h2{
+    font-size:1.3rem;color:var(--muted);font-weight:500;margin-bottom:20px;
+    min-height:30px;
+  }
+  .hero-text h2 #typed{color:var(--accent2);font-weight:600;}
+  .hero-text p{color:var(--muted);max-width:520px;margin-bottom:34px;line-height:1.7;}
+  .btn-group{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{
+    padding:14px 30px;border-radius:12px;font-weight:600;font-size:.95rem;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:.3s;cursor:pointer;border:none;
+  }
+  .btn-primary{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 8px 20px rgba(59,130,246,.35);
+  }
+  .btn-primary:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(59,130,246,.5);}
+  .btn-outline{
+    border:1px solid var(--border);color:var(--text);background:transparent;
+  }
+  .btn-outline:hover{border-color:var(--accent2);color:var(--accent2);transform:translateY(-4px);}
+  .socials{display:flex;gap:14px;}
+  .socials a{
+    width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    transition:.3s;
+  }
+  .socials a:hover{background:linear-gradient(90deg,var(--accent),var(--accent2));border-color:transparent;color:#fff;transform:translateY(-4px);}
+
+  .hero-img{
+    flex:0 0 340px;position:relative;z-index:1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-img .ring{
+    width:340px;height:340px;border-radius:50%;
+    background:conic-gradient(from 0deg,var(--accent),var(--accent2),var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    animation:spin 8s linear infinite;
+    padding:6px;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .hero-img img{
+    width:100%;height:100%;object-fit:cover;border-radius:50%;
+    border:6px solid var(--bg);
+    background:var(--bg-alt);
+  }
+  .hero-img .badge{
+    position:absolute;bottom:10px;right:10px;
+    background:var(--card);border:1px solid var(--border);
+    padding:10px 16px;border-radius:14px;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;
+  }
+  .hero-img .badge i{color:#22c55e;}
+
+  .scroll-down{
+    position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+    color:var(--muted);font-size:1.4rem;animation:bounce 2s infinite;
+  }
+  @keyframes bounce{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,-10px);}}
+
+  /* ===== STATS ===== */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+    background:var(--bg-alt);
+    padding:60px 8vw;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .stat-item{text-align:center;}
+  .stat-item h3{
+    font-size:2.4rem;font-weight:800;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .stat-item p{color:var(--muted);margin-top:6px;font-size:.9rem;}
+  @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr);}}
+
+  /* ===== ABOUT ===== */
+  .about-wrap{display:flex;gap:60px;flex-wrap:wrap;align-items:center;}
+  .about-card{
+    flex:1;min-width:280px;
+    background:var(--card);border:1px solid var(--border);
+    padding:40px;border-radius:var(--radius);box-shadow:var(--shadow);
+  }
+  .about-card p{color:var(--muted);line-height:1.8;margin-bottom:20px;}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .info-grid div{font-size:.9rem;}
+  .info-grid span{color:var(--muted);display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;}
+  .info-grid strong{color:var(--text);}
+
+  /* ===== SKILLS ===== */
+  .skills-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+  }
+  .skill-card{
+    background:var(--card);border:1px solid var(--border);
+    padding:28px;border-radius:var(--radius);
+    transition:.35s;
+  }
+  .skill-card:hover{transform:translateY(-8px);border-color:var(--accent2);box-shadow:var(--shadow);}
+  .skill-card i{
+    font-size:1.6rem;margin-bottom:14px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .skill-card h4{margin-bottom:10px;font-size:1.05rem;}
+  .bar{height:7px;border-radius:10px;background:var(--border);overflow:hidden;}
+  .bar span{
+    display:block;height:100%;border-radius:10px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    width:0%;transition:width 1.4s ease;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline{position:relative;max-width:800px;margin:0 auto;}
+  .timeline::before{
+    content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;
+    background:linear-gradient(var(--accent),var(--accent2));
+  }
+  .t-item{position:relative;padding-left:60px;margin-bottom:44px;}
+  .t-item::before{
+    content:'';position:absolute;left:11px;top:4px;
+    width:20px;height:20px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--accent2);
+  }
+  .t-item .date{
+    display:inline-block;background:var(--card);border:1px solid var(--border);
+    padding:4px 14px;border-radius:20px;font-size:.78rem;color:var(--accent2);
+    margin-bottom:10px;font-weight:600;
+  }
+  .t-item h4{font-size:1.15rem;margin-bottom:4px;}
+  .t-item h5{font-size:.92rem;color:var(--muted);font-weight:500;margin-bottom:10px;}
+  .t-item ul{margin-left:0;}
+  .t-item ul li{
+    color:var(--muted);font-size:.92rem;line-height:1.7;
+    position:relative;padding-left:18px;margin-bottom:4px;
+  }
+  .t-item ul li::before{
+    content:'▹';position:absolute;left:0;color:var(--accent2);
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:26px;
+  }
+  .project-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--radius);overflow:hidden;
+    transition:.35s;position:relative;
+  }
+  .project-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--accent2);}
+  .project-thumb{
+    height:170px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:flex;align-items:center;justify-content:center;
+    font-size:2.4rem;color:#fff;opacity:.9;
+  }
+  .project-body{padding:24px;}
+  .project-body h4{margin-bottom:8px;}
+  .project-body p{color:var(--muted);font-size:.88rem;margin-bottom:16px;line-height:1.6;}
+  .project-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .project-tags span{
+    font-size:.72rem;background:var(--bg);border:1px solid var(--border);
+    padding:4px 10px;border-radius:20px;color:var(--muted);
+  }
+  .project-link{font-size:.85rem;font-weight:600;color:var(--accent2);}
+  .project-card.placeholder{
+    display:flex;align-items:center;justify-content:center;
+    border-style:dashed;min-height:260px;color:var(--muted);text-align:center;
+    padding:24px;font-size:.9rem;
+  }
+
+  /* ===== LANG / INTERESTS ===== */
+  .split-two{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  @media(max-width:700px){.split-two{grid-template-columns:1fr;}}
+  .mini-card{
+    background:var(--card);border:1px solid var(--border);
+    padding:30px;border-radius:var(--radius);
+  }
+  .mini-card h4{margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .lang-row{display:flex;justify-content:space-between;margin-bottom:14px;font-size:.9rem;}
+  .interest-list{display:flex;gap:14px;flex-wrap:wrap;}
+  .interest-list span{
+    background:var(--bg);border:1px solid var(--border);padding:10px 16px;
+    border-radius:12px;font-size:.85rem;display:flex;align-items:center;gap:8px;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;}
+  @media(max-width:850px){.contact-wrap{grid-template-columns:1fr;}}
+  .contact-info .c-item{
+    display:flex;align-items:center;gap:16px;
+    padding:18px 0;border-bottom:1px solid var(--border);
+  }
+  .contact-info .c-item i{
+    width:46px;height:46px;border-radius:12px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;
+  }
+  .contact-info .c-item span{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;}
+  .contact-info .c-item strong{font-size:.95rem;}
+
+  form{background:var(--card);border:1px solid var(--border);padding:34px;border-radius:var(--radius);}
+  form input, form textarea{
+    width:100%;padding:14px;margin-bottom:18px;border-radius:10px;
+    background:var(--bg);border:1px solid var(--border);color:var(--text);
+    font-family:inherit;font-size:.92rem;
+  }
+  form input:focus, form textarea:focus{outline:none;border-color:var(--accent2);}
+  form button{width:100%;justify-content:center;}
+
+  /* ===== FOOTER ===== */
+  footer{
+    text-align:center;padding:40px 8vw;border-top:1px solid var(--border);
+    color:var(--muted);font-size:.85rem;
+  }
+  footer .foot-socials{display:flex;justify-content:center;gap:16px;margin-bottom:16px;}
+  footer .foot-socials a{
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;transition:.3s;
+  }
+  footer .foot-socials a:hover{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;}
+  .update-tag{
+    display:inline-block;margin-top:10px;font-size:.75rem;
+    background:var(--card);border:1px solid var(--border);
+    padding:4px 14px;border-radius:20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">Touhid<span>.dev</span></div>
+  <nav id="nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav-actions">
+    <div id="themeToggle"><i class="fa-solid fa-moon"></i></div>
+    <div class="burger" id="burger"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-text" data-aos="fade-right">
+    <span class="hi">👋 Welcome to my portfolio</span>
+    <h1>Sikder Touhid <span class="grad-text">Shakib</span></h1>
+    <h2>I'm a <span id="typed"></span></h2>
+    <p>Dedicated Zoology graduate with strong leadership experience in managing large online educational communities. Proven expertise in team coordination, content strategy, digital project development, and SEO.</p>
+    <div class="btn-group">
+      <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+      <a href="#" class="btn btn-outline" id="downloadCv"><i class="fa-solid fa-download"></i> Download CV</a>
+    </div>
+    <div class="socials">
+      <a href="mailto:touhidshakib4@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:+8801715550210"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+  <div class="hero-img" data-aos="fade-left">
+    <div class="ring">
+      <img src="assets/profile.jpg" alt="Sikder Touhid Shakib">
+    </div>
+    <div class="badge"><i class="fa-solid fa-circle"></i> Open to work</div>
+  </div>
+  <a href="#about" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="stat-item" data-aos="zoom-in"><h3 class="counter" data-target="200000">0</h3><p>Students Reached</p></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="100"><h3 class="counter" data-target="30">0</h3><p>Team Members Led</p></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="200"><h3 class="counter" data-target="3">0</h3><p>Certifications</p></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="300"><h3 class="counter" data-target="4">0</h3><p>Years Experience</p></div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <span class="section-tag" data-aos="fade-up">About Me</span>
+  <h2 class="section-title" data-aos="fade-up">Get to know <span class="grad-text">who I am</span></h2>
+  <p class="section-sub" data-aos="fade-up">A quick overview of my background, values and what drives me every day.</p>
+
+  <div class="about-wrap">
+    <div class="about-card" data-aos="fade-right">
+      <p>I'm a Zoology graduate with a passion for community leadership and digital growth. As Chief Coordinator of a large online educational platform, I've led a 30-member team supporting over 200,000 students — coordinating academic resources, resolving technical issues, and managing sponsorships for non-profit programs.</p>
+      <p>Beyond education, I bring hands-on skills in SEO, digital marketing, and office administration tools, always aiming to bridge academic knowledge with real-world digital impact.</p>
+      <div class="info-grid">
+        <div><span>Name</span><strong>Sikder Touhid Shakib</strong></div>
+        <div><span>Email</span><strong>touhidshakib4@gmail.com</strong></div>
+        <div><span>Phone</span><strong>+8801715-550210</strong></div>
+        <div><span>Location</span><strong>Tangail, Dhaka</strong></div>
+        <div><span>Degree</span><strong>B.Sc. in Life Science</strong></div>
+        <div><span>Status</span><strong>Available for Work</strong></div>
+      </div>
+    </div>
+    <div class="about-card" data-aos="fade-left">
+      <h4 style="margin-bottom:16px;">🎯 What I Bring</h4>
+      <p>✔ Leadership managing 200,000+ member community</p>
+      <p>✔ Strong problem-solving & critical thinking</p>
+      <p>✔ SEO & digital marketing knowledge</p>
+      <p>✔ Advanced MS Office & documentation skills</p>
+      <p style="margin-bottom:0;">✔ Clear professional communication (email, Zoom, Meet)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" style="background:var(--bg-alt);">
+  <span class="section-tag" data-aos="fade-up">Skills</span>
+  <h2 class="section-title" data-aos="fade-up">Things I'm <span class="grad-text">good at</span></h2>
+  <p class="section-sub" data-aos="fade-up">A mix of leadership, technical, and marketing skills built through real experience.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="fade-up"><i class="fa-solid fa-users-gear"></i><h4>Leadership & Management</h4><div class="bar"><span data-width="95"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-file-word"></i><h4>Microsoft Office (Word, Excel)</h4><div class="bar"><span data-width="90"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="160"><i class="fa-solid fa-bullhorn"></i><h4>Digital Marketing</h4><div class="bar"><span data-width="80"></span></div></div>
+    <div class="skill-card" data-aos="fade-up"><i class="fa-solid fa-magnifying-glass-chart"></i><h4>SEO (On-page & Technical)</h4><div class="bar"><span data-width="85"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-brain"></i><h4>Critical Thinking</h4><div class="bar"><span data-width="90"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="160"><i class="fa-solid fa-puzzle-piece"></i><h4>Problem Solving</h4><div class="bar"><span data-width="88"></span></div></div>
+    <div class="skill-card" data-aos="fade-up"><i class="fa-solid fa-envelope-open-text"></i><h4>Professional Email Writing</h4><div class="bar"><span data-width="92"></span></div></div>
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-video"></i><h4>Zoom / Google Meet</h4><div class="bar"><span data-width="90"></span></div></div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <span class="section-tag" data-aos="fade-up">Education</span>
+  <h2 class="section-title" data-aos="fade-up">My <span class="grad-text">academic journey</span></h2>
+  <p class="section-sub" data-aos="fade-up">From secondary school to university, here's my educational path.</p>
+
+  <div class="timeline">
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2019 - 2023</span>
+      <h4>Bachelor of Life Science</h4>
+      <h5>Government Saadat College (National University), Tangail</h5>
+      <ul><li>CGPA: 3.29 (Official session 2019–2023; completion delayed to 2025 due to academic calendar adjustments)</li></ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2017 - 2019</span>
+      <h4>Higher Secondary Certificate (HSC)</h4>
+      <h5>Major General Mahmudul Hasan Adarsha College, Tangail</h5>
+      <ul><li>GPA: 4.08 out of 5.00 (Science group with Higher Mathematics)</li></ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2012 - 2017</span>
+      <h4>Secondary School Certificate (SSC)</h4>
+      <h5>Velayet Hossain Buhumukhi High School, Tangail</h5>
+      <ul><li>GPA: 5.00 out of 5.00 (Science group)</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" style="background:var(--bg-alt);">
+  <span class="section-tag" data-aos="fade-up">Experience</span>
+  <h2 class="section-title" data-aos="fade-up">Where I've <span class="grad-text">made an impact</span></h2>
+  <p class="section-sub" data-aos="fade-up">Leadership roles and technical programs that shaped my professional skills.</p>
+
+  <div class="timeline">
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2022 - Present</span>
+      <h4>Chief Coordinator</h4>
+      <h5>Zoology Educational Platform (Remote)</h5>
+      <ul>
+        <li>Led a 30-member team managing a 200,000+ student learning community.</li>
+        <li>Coordinated creation and distribution of academic resources and exam updates for Zoology students.</li>
+        <li>Resolved daily operational and technical issues to maintain platform quality.</li>
+        <li>Managed sponsorships for non-profit educational programs.</li>
+      </ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2022</span>
+      <h4>Search Engine Optimization (3-month program)</h4>
+      <h5>Khalid Farhan Passive Journal</h5>
+      <ul>
+        <li>Keyword research for organic traffic.</li>
+        <li>On-page SEO: meta tags, headings, content optimisation.</li>
+        <li>Technical SEO: site speed, mobile-friendliness, indexing.</li>
+        <li>Analytics with Google Search Console, Semrush, Moz.</li>
+      </ul>
+    </div>
+    <div class="t-item" data-aos="fade-up">
+      <span class="date">2021</span>
+      <h4>Database Programming (6-month program)</h4>
+      <ul>
+        <li>Advanced MS Office: Word (formatting & layout), Excel (data analysis, formulas), PowerPoint (professional presentations).</li>
+        <li>Proficient in Zoom, Google Meet, and professional email communication.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <span class="section-tag" data-aos="fade-up">Projects</span>
+  <h2 class="section-title" data-aos="fade-up">Recent <span class="grad-text">work & initiatives</span></h2>
+  <p class="section-sub" data-aos="fade-up">Updated monthly — here's what I've been building lately.</p>
+
+  <div class="projects-grid">
+    <!-- PROJECTS: duplicate this block to add a new project card -->
+    <div class="project-card" data-aos="fade-up">
+      <div class="project-thumb"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="project-body">
+        <h4>Zoology Learning Community</h4>
+        <p>Managing a 200,000+ member educational platform providing exam resources and academic support.</p>
+        <div class="project-tags"><span>Leadership</span><span>Education</span><span>Community</span></div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+    </div>
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-thumb"><i class="fa-solid fa-chart-line"></i></div>
+      <div class="project-body">
+        <h4>SEO Growth Case Study</h4>
+        <p>Applied on-page & technical SEO strategies to improve organic reach during a 3-month program.</p>
+        <div class="project-tags"><span>SEO</span><span>Analytics</span></div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+    </div>
+    <!-- PLACEHOLDER: replace this card with your next monthly update -->
+    <div class="project-card placeholder" data-aos="fade-up" data-aos-delay="200">
+      <div>
+        <i class="fa-solid fa-plus" style="font-size:1.8rem;margin-bottom:10px;display:block;"></i>
+        New project coming next update 🚀
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LANGUAGES & INTERESTS ===== -->
+<section style="background:var(--bg-alt);">
+  <span class="section-tag" data-aos="fade-up">Extras</span>
+  <h2 class="section-title" data-aos="fade-up">Languages & <span class="grad-text">Interests</span></h2>
+
+  <div class="split-two">
+    <div class="mini-card" data-aos="fade-right">
+      <h4><i class="fa-solid fa-language"></i> Languages</h4>
+      <div class="lang-row"><span>Bengali</span><strong>Native</strong></div>
+      <div class="bar" style="margin-bottom:18px;"><span data-width="100"></span></div>
+      <div class="lang-row"><span>English</span><strong>Good</strong></div>
+      <div class="bar"><span data-width="75"></span></div>
+    </div>
+    <div class="mini-card" data-aos="fade-left">
+      <h4><i class="fa-solid fa-heart"></i> Interests</h4>
+      <div class="interest-list">
+        <span><i class="fa-solid fa-film"></i> Documentaries</span>
+        <span><i class="fa-solid fa-chess"></i> Chess</span>
+        <span><i class="fa-solid fa-futbol"></i> Football</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <span class="section-tag" data-aos="fade-up">Contact</span>
+  <h2 class="section-title" data-aos="fade-up">Let's <span class="grad-text">work together</span></h2>
+  <p class="section-sub" data-aos="fade-up">Have an opportunity or just want to say hi? Reach out anytime.</p>
+
+  <div class="contact-wrap">
+    <div class="contact-info" data-aos="fade-right">
+      <div class="c-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div><span>Email</span><strong>touhidshakib4@gmail.com</strong></div>
+      </div>
+      <div class="c-item">
+        <i class="fa-solid fa-phone"></i>
+        <div><span>Phone</span><strong>+8801715-550210</strong></div>
+      </div>
+      <div class="c-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div><span>Location</span><strong>Tangail Sadar-1900, Dhaka</strong></div>
+      </div>
+      <div class="c-item" style="border-bottom:none;">
+        <i class="fa-brands fa-github"></i>
+        <div><span>GitHub</span><strong>github.com/yourusername</strong></div>
+      </div>
+    </div>
+
+    <form data-aos="fade-left" onsubmit="return handleForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject">
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-socials">
+    <a href="mailto:touhidshakib4@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="tel:+8801715550210"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+  <p>© <span id="year"></span> Sikder Touhid Shakib. All rights reserved.</p>
+  <span class="update-tag">🔄 Last updated: <span id="lastUpdated">June 2024</span></span>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true });
+
+  // Typing effect
+  new Typed('#typed', {
+    strings: ['Zoology Graduate', 'Community Leader', 'SEO Specialist', 'Digital Marketer'],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+  });
+
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    themeToggle.innerHTML = document.body.classList.contains('light')
+      ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  });
+
+  // Mobile nav
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  burger.addEventListener('click', () => nav.classList.toggle('active'));
+  document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('active')));
+
+  // Animated skill bars
+  const bars = document.querySelectorAll('.bar span');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.dataset.width + '%';
+      }
+    });
+  }, { threshold: 0.4 });
+  bars.forEach(b => barObserver.observe(b));
+
+  // Animated counters
+  const counters = document.querySelectorAll('.counter');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = +el.dataset.target;
+        let count = 0;
+        const step = Math.max(target / 100, 1);
+        const update = () => {
+          count += step;
+          if (count < target) {
+            el.textContent = Math.ceil(count).toLocaleString();
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = target.toLocaleString() + '+';
+          }
+        };
+        update();
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(c => counterObserver.observe(c));
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Simple contact form handler (replace with Formspree/EmailJS for real sending)
+  function handleForm(e){
+    e.preventDefault();
+    alert('Thanks for reaching out! I will get back to you soon 🙌\n(Connect this form to Formspree/EmailJS to receive real emails.)');
+    e.target.reset();
+    return false;
+  }
+
+  // Download CV button (point to your actual CV file in the repo)
+  document.getElementById('downloadCv').addEventListener('click', function(e){
+    e.preventDefault();
+    window.location.href = 'assets/Touhid_Shakib_CV.pdf';
+  });
+</script>
+</body>
+</html>
