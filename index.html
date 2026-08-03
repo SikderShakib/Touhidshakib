@@ -508,6 +508,53 @@
     bottom: 18px; right: 18px;
   }
 }
+  /* ===== BOOKING SECTION ===== */
+.booking-section{
+  text-align:center;
+  background:linear-gradient(135deg, var(--bg-alt), var(--bg));
+  position:relative;
+  overflow:hidden;
+}
+.booking-card{
+  max-width:700px;
+  margin:0 auto;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:50px 40px;
+  box-shadow:var(--shadow);
+  position:relative;
+  z-index:1;
+}
+.booking-card i.cal-icon{
+  font-size:2.6rem;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:18px;
+  display:inline-block;
+}
+.booking-card h3{
+  font-size:1.6rem;font-weight:700;margin-bottom:12px;
+}
+.booking-card p{
+  color:var(--muted);margin-bottom:30px;max-width:480px;margin-left:auto;margin-right:auto;
+  line-height:1.7;
+}
+.booking-features{
+  display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:32px;
+}
+.booking-features span{
+  font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:8px;
+}
+.booking-features i{color:var(--accent2);}
+.btn-book{
+  padding:16px 38px;font-size:1rem;
+}
+
+@media(max-width:600px){
+  .booking-card{padding:36px 24px;}
+  .booking-features{flex-direction:column;gap:12px;align-items:center;}
+}
 </style>
 </head>
 <body>
@@ -541,6 +588,7 @@
     <p>Dedicated Zoology graduate with strong leadership experience in managing large online educational communities. Proven expertise in team coordination, content strategy, digital project development, and SEO.</p>
     <div class="btn-group">
       <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+      <a href="#booking" class="btn btn-outline"><i class="fa-solid fa-calendar-days"></i> Book a Meeting</a>
       <a href="#" class="btn btn-outline" id="downloadCv"><i class="fa-solid fa-download"></i> Download CV</a>
     </div>
     <div class="socials">
@@ -744,6 +792,23 @@
 </section>
 
 <!-- ===== CONTACT ===== -->
+  <!-- ===== BOOK A MEETING (Google Calendar) ===== -->
+<section class="booking-section" id="booking">
+  <span class="section-tag" data-aos="fade-up">Schedule a Call</span>
+  <h2 class="section-title" data-aos="fade-up">Let's <span class="grad-text">talk in person</span></h2>
+  <p class="section-sub" style="margin-left:auto;margin-right:auto;text-align:center;" data-aos="fade-up">Pick a time that works for you — no back-and-forth emails needed.</p>
+
+  <div class="booking-card" data-aos="zoom-in" style="max-width:900px;">
+  <i class="fa-solid fa-calendar-check cal-icon"></i>
+  <h3>Book a Free 30-Minute Meeting</h3>
+  <p>Pick any available slot below — it syncs directly with my calendar.</p>
+  <iframe 
+    src="https://calendar.google.com/calendar/appointments/schedules/q2SG8B1dYSBAtfou5?gv=true" 
+    style="border:0; width:100%; height:600px; border-radius:12px; margin-top:20px;" 
+    frameborder="0">
+  </iframe>
+</div>
+</section>
 <section id="contact">
   <span class="section-tag" data-aos="fade-up">Contact</span>
   <h2 class="section-title" data-aos="fade-up">Let's <span class="grad-text">work together</span></h2>
@@ -1272,6 +1337,9 @@
     background:var(--card);border:1px solid var(--border);
     padding:4px 14px;border-radius:20px;
   }
+  @media(max-width:600px){
+  .booking-card iframe{ height: 500px; }
+}
 </style>
 </head>
 <body>
@@ -1287,6 +1355,7 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#booking">Book a Call</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
