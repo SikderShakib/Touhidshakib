@@ -7,8 +7,6 @@
 <meta name="description" content="Portfolio of Sikder Touhid Shakib — Zoology Graduate, Community Leader, SEO & Digital Marketing enthusiast.">
 
 <!-- Fonts & Icons -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -740,17 +738,6 @@
   <h2 class="section-title" data-aos="fade-up">Let's <span class="grad-text">talk in person</span></h2>
   <p class="section-sub" style="margin-left:auto;margin-right:auto;text-align:center;" data-aos="fade-up">Pick a time that works for you — no back-and-forth emails needed.</p>
 
-  <div class="booking-card" data-aos="zoom-in">
-    <i class="fa-solid fa-calendar-check cal-icon"></i>
-    <h3>Book a Free 30-Minute Meeting</h3>
-    <p>Pick any available slot below — it syncs directly with my Google Calendar.</p>
-
-    <div class="booking-features">
-      <span><i class="fa-solid fa-clock"></i> 30 min</span>
-      <span><i class="fa-solid fa-video"></i> Google Meet</span>
-      <span><i class="fa-solid fa-bolt"></i> Instant Confirmation</span>
-    </div>
-
     <!-- FIXED: src must be plain URL, not markdown [url](url) - Replace ID with your REAL link from Google Calendar if needed -->
     <iframe 
       src="https://calendar.google.com/calendar/appointments/schedules/q2SG8B1dYSBAtfou5?gv=true" 
@@ -767,7 +754,7 @@
     <p>
         Pick any available slot below — it syncs directly with my calendar.
     </p>
-
+</div>
     <div
       class="calendly-inline-widget"
       data-url="https://calendly.com/touhidshakib4/30min"
@@ -912,5 +899,34 @@
     window.location.href = 'assets/Touhid_Shakib_CV.pdf';
   });
 </script>
+  <!-- Google Calendar Appointment Scheduling begin -->
+
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
+<script>
+(function () {
+  var target = document.currentScript;
+
+  window.addEventListener("load", function () {
+
+    calendar.schedulingButton.load({
+
+      url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3H2DVKyZkCuIRHk-NMWiVpCfk6pIQ1jhGB7E9geroYf3wjryEgmXHde_Uhxxs0MM09VOFhuX_D?gv=true",
+
+      color: "#2563eb",
+
+      label: "📅 Book a Meeting",
+
+      target,
+
+    });
+
+  });
+})();
+</script>
+
+<!-- Google Calendar Appointment Scheduling end -->
 </body>
 </html>
