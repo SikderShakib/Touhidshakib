@@ -26,7 +26,7 @@
       <form id="login-form" novalidate>
         <div class="field">
           <label for="login-user">Username</label>
-          <input class="input" id="login-user" name="username" value="admin" autocomplete="username" required>
+          <input class="input" id="login-user" name="username" value="admin" autocomplete="username" required type="text">
         </div>
         <div class="field">
           <label for="login-pass">Password</label>
@@ -218,21 +218,21 @@
                 <div class="field-row">
                   <div class="field">
                     <label for="set-siteName">Site name</label>
-                    <input class="input" id="set-siteName" name="siteName" placeholder="Touhid Shakib">
+                    <input class="input" id="set-siteName" name="siteName" placeholder="Touhid Shakib" type="text">
                   </div>
                   <div class="field">
                     <label for="set-currency">Currency symbol</label>
-                    <input class="input" id="set-currency" name="currency" placeholder="৳" maxlength="4">
+                    <input class="input" id="set-currency" name="currency" placeholder="৳" maxlength="4" type="text">
                   </div>
                 </div>
                 <div class="field-row">
                   <div class="field">
                     <label for="set-heroTitle">Hero headline</label>
-                    <input class="input" id="set-heroTitle" name="heroTitle" placeholder="Real products. Real problems solved.">
+                    <input class="input" id="set-heroTitle" name="heroTitle" placeholder="Real products. Real problems solved." type="text">
                   </div>
                   <div class="field">
                     <label for="set-siteTagline">Short tagline</label>
-                    <input class="input" id="set-siteTagline" name="siteTagline" placeholder="Products, software & courses that solve real problems">
+                    <input class="input" id="set-siteTagline" name="siteTagline" placeholder="Products, software & courses that solve real problems" type="text">
                   </div>
                 </div>
                 <div class="field">
@@ -246,21 +246,21 @@
                   </div>
                   <div class="field">
                     <label for="set-whatsapp">WhatsApp number (with country code)</label>
-                    <input class="input" id="set-whatsapp" name="whatsapp" placeholder="+8801XXXXXXXXX">
+                    <input class="input" id="set-whatsapp" name="whatsapp" placeholder="+8801XXXXXXXXX" type="text">
                   </div>
                 </div>
                 <div class="field-row-3">
                   <div class="field">
                     <label for="set-facebook">Facebook URL</label>
-                    <input class="input" id="set-facebook" name="facebook" placeholder="https://facebook.com/…">
+                    <input class="input" id="set-facebook" name="facebook" placeholder="https://facebook.com/…" type="text">
                   </div>
                   <div class="field">
                     <label for="set-youtube">YouTube URL</label>
-                    <input class="input" id="set-youtube" name="youtube" placeholder="https://youtube.com/@…">
+                    <input class="input" id="set-youtube" name="youtube" placeholder="https://youtube.com/@…" type="text">
                   </div>
                   <div class="field">
                     <label for="set-github">GitHub / website URL</label>
-                    <input class="input" id="set-github" name="github" placeholder="https://github.com/…">
+                    <input class="input" id="set-github" name="github" placeholder="https://github.com/…" type="text">
                   </div>
                 </div>
                 <div style="display:flex;justify-content:flex-end;gap:0.6rem;">
@@ -350,7 +350,7 @@
           <div class="form-section-title">The basics</div>
           <div class="field">
             <label for="f-title">Product title *</label>
-            <input class="input" id="f-title" name="title" placeholder="e.g. BioNest — HSC Biology Question Bank" maxlength="160" required>
+            <input class="input" id="f-title" name="title" placeholder="e.g. BioNest — HSC Biology Question Bank" maxlength="160" required type="text">
           </div>
           <div class="field-row">
             <div class="field">
@@ -364,12 +364,12 @@
             </div>
             <div class="field">
               <label for="f-version">Version / batch</label>
-              <input class="input" id="f-version" name="version" placeholder="e.g. 1.2.0 or 2026 batch">
+              <input class="input" id="f-version" name="version" placeholder="e.g. 1.2.0 or 2026 batch" type="text">
             </div>
           </div>
           <div class="field">
             <label for="f-tagline">Short tagline *</label>
-            <input class="input" id="f-tagline" name="tagline" placeholder="One line that explains the problem it solves" maxlength="300" required>
+            <input class="input" id="f-tagline" name="tagline" placeholder="One line that explains the problem it solves" maxlength="300" required type="text">
           </div>
           <div class="field">
             <label for="f-description">Full description</label>
@@ -388,21 +388,21 @@
             </div>
             <div class="field">
               <label for="f-priceLabel">Price label (optional)</label>
-              <input class="input" id="f-priceLabel" name="priceLabel" placeholder="Free / Coming soon">
+              <input class="input" id="f-priceLabel" name="priceLabel" placeholder="Free / Coming soon" type="text">
             </div>
             <div class="field">
               <label for="f-fileType">File format</label>
-              <input class="input" id="f-fileType" name="fileType" placeholder="PDF / ZIP / APK">
+              <input class="input" id="f-fileType" name="fileType" placeholder="PDF / ZIP / APK" type="text">
             </div>
           </div>
           <div class="field-row">
             <div class="field">
               <label for="f-fileSize">Display size</label>
-              <input class="input" id="f-fileSize" name="fileSize" placeholder="e.g. 48 MB (auto-filled)">
+              <input class="input" id="f-fileSize" name="fileSize" placeholder="e.g. 48 MB (auto-filled)" type="text">
             </div>
             <div class="field">
               <label for="f-demoUrl">Demo / preview URL</label>
-              <input class="input" id="f-demoUrl" name="demoUrl" placeholder="https://…">
+              <input class="input" id="f-demoUrl" name="demoUrl" placeholder="https://…" type="text">
             </div>
           </div>
 
@@ -428,14 +428,14 @@
 
           <div class="field">
             <label for="f-externalUrl">…or link an external download</label>
-            <input class="input" id="f-externalUrl" name="externalUrl" placeholder="https://drive.google.com/… or GitHub release">
+            <input class="input" id="f-externalUrl" name="externalUrl" placeholder="https://drive.google.com/… or GitHub release" type="text">
             <span class="hint">Use this for very large files or files hosted elsewhere. Uploading a file above takes priority.</span>
           </div>
 
           <div class="form-section-title">Visibility</div>
           <div class="field">
             <label for="f-tags">Tags — comma separated</label>
-            <input class="input" id="f-tags" name="tags" placeholder="HSC, Biology, PDF">
+            <input class="input" id="f-tags" name="tags" placeholder="HSC, Biology, PDF" type="text">
           </div>
           <div class="switch-row">
             <label class="switch">
