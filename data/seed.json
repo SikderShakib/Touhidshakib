@@ -1,0 +1,246 @@
+{
+  "settings": {
+    "adminUser": "admin",
+    "siteName": "Touhid Shakib",
+    "siteTagline": "Products, software & courses that solve real problems",
+    "heroTitle": "Real products. Real problems solved.",
+    "heroSubtitle": "I build practical tools for students, creators and small businesses — study products, desktop software, complete courses and Android apps. Download, install, and get to work.",
+    "contactEmail": "touhidshakib4@gmail.com",
+    "whatsapp": "",
+    "facebook": "",
+    "youtube": "",
+    "github": "https://github.com/SikderShakib",
+    "currency": "৳"
+  },
+  "categories": [
+    {
+      "id": "product",
+      "name": "Products",
+      "icon": "box",
+      "blurb": "Ready-made digital products & problem-solving kits"
+    },
+    {
+      "id": "software",
+      "name": "Software",
+      "icon": "code",
+      "blurb": "Desktop & web tools that automate the boring work"
+    },
+    {
+      "id": "course",
+      "name": "Courses",
+      "icon": "book",
+      "blurb": "Structured courses with lessons, sheets and support"
+    },
+    {
+      "id": "apk",
+      "name": "APK & Apps",
+      "icon": "android",
+      "blurb": "Android apps you can install in one tap"
+    }
+  ],
+  "products": [
+    {
+      "id": "p_bionest",
+      "title": "BioNest — HSC Biology Question Bank",
+      "category": "product",
+      "tagline": "12,000+ board & admission questions, sorted chapter-wise with instant answer keys.",
+      "description": "BioNest is the question bank I wished I had while teaching 200,000+ biology students.\n\nEvery question is tagged by chapter, board year and difficulty, so you can drill exactly what you are weak at instead of scrolling random PDFs. Answer keys are checked against the latest board syllabus, and each chapter ends with a 20-question self-test.\n\nThe pack includes a printable PDF, a Notion-ready copy and a spreadsheet tracker for revision.",
+      "features": [
+        "12,000+ MCQ + CQ questions with verified answers",
+        "Chapter-wise and year-wise filters (2015–2025)",
+        "Printable PDF + Notion copy + revision tracker",
+        "Lifetime access to every future update"
+      ],
+      "tags": [
+        "HSC",
+        "Biology",
+        "Question bank",
+        "PDF"
+      ],
+      "price": 499,
+      "priceLabel": "",
+      "version": "3.2",
+      "fileType": "PDF + Notion",
+      "fileSize": "48 MB",
+      "cover": "/assets/covers/bionest.svg",
+      "fileUrl": "",
+      "externalUrl": "",
+      "demoUrl": "",
+      "featured": true,
+      "published": true,
+      "downloads": 412,
+      "views": 2861,
+      "createdAt": "2025-11-18T09:20:00.000Z",
+      "updatedAt": "2026-08-02T11:00:00.000Z"
+    },
+    {
+      "id": "p_rankradar",
+      "title": "RankRadar — SEO Audit Toolkit",
+      "category": "software",
+      "tagline": "Crawl any site, find the 20 fixes that actually move rankings, export a client-ready report.",
+      "description": "RankRadar is a lightweight desktop tool for quick technical SEO audits. Paste a URL, it crawls up to 500 pages and scores titles, meta descriptions, headings, alt text, internal links, page speed signals and duplicate content.\n\nAt the end you get a prioritised action list — the stuff worth fixing this week — plus a clean PDF report you can send to a client. Works on Windows, macOS and Linux (built with Electron).",
+      "features": [
+        "Crawl up to 500 pages per audit",
+        "Prioritised fix list scored by impact",
+        "One-click branded PDF report export",
+        "Offline-first: your crawl data never leaves your machine"
+      ],
+      "tags": [
+        "SEO",
+        "Desktop app",
+        "Reporting",
+        "Windows/macOS"
+      ],
+      "price": 0,
+      "priceLabel": "Free",
+      "version": "1.4.0",
+      "fileType": "ZIP (Desktop app)",
+      "fileSize": "86 MB",
+      "cover": "/assets/covers/rankradar.svg",
+      "fileUrl": "",
+      "externalUrl": "https://github.com/SikderShakib",
+      "demoUrl": "",
+      "featured": true,
+      "published": true,
+      "downloads": 1284,
+      "views": 5402,
+      "createdAt": "2026-02-11T07:45:00.000Z",
+      "updatedAt": "2026-09-14T16:30:00.000Z"
+    },
+    {
+      "id": "p_admission_camp",
+      "title": "Admission War Room — Biology Crash Course",
+      "category": "course",
+      "tagline": "8 weeks, 32 recorded lessons and a daily practice sheet to finish the admission syllabus on time.",
+      "description": "A battle-tested crash course for medical & university admission biology. Eight weeks, four lessons per week, each one 35–50 minutes and paired with a practice sheet.\n\nWeek 8 is a full mock-test marathon with worked solutions. You also get access to a private support group where I answer questions every week.",
+      "features": [
+        "32 recorded lessons (8 weeks, 18+ hours)",
+        "32 downloadable practice sheets + solutions",
+        "Two full mock exams with video walkthroughs",
+        "Private support group with weekly live Q&A"
+      ],
+      "tags": [
+        "Admission",
+        "Biology",
+        "Video course",
+        "Mock test"
+      ],
+      "price": 1500,
+      "priceLabel": "",
+      "version": "2026 Batch",
+      "fileType": "Video + PDF",
+      "fileSize": "Streamed",
+      "cover": "/assets/covers/course.svg",
+      "fileUrl": "",
+      "externalUrl": "",
+      "demoUrl": "",
+      "featured": true,
+      "published": true,
+      "downloads": 178,
+      "views": 1520,
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-10-01T09:15:00.000Z"
+    },
+    {
+      "id": "p_studypulse",
+      "title": "StudyPulse — Offline Notes Reader (APK)",
+      "category": "apk",
+      "tagline": "Lightweight Android reader for PDFs and notes that keeps working with zero internet.",
+      "description": "StudyPulse is a 9 MB Android app for students who study on shared, low-end phones. It opens PDFs and text notes instantly, remembers the exact page you stopped on, and syncs nothing to the cloud unless you ask.\n\nIncludes a focus timer, night reading mode and a bookmark shelf. Built for Android 7 and above; no ads, no account, no tracking.",
+      "features": [
+        "Only 9 MB — runs on low-end devices",
+        "Resumes your last page automatically",
+        "Dark mode + eye-comfort reading theme",
+        "No ads, no account, works fully offline"
+      ],
+      "tags": [
+        "Android",
+        "APK",
+        "PDF reader",
+        "Offline"
+      ],
+      "price": 0,
+      "priceLabel": "Free",
+      "version": "2.1.3",
+      "fileType": "APK (Android 7+)",
+      "fileSize": "9.4 MB",
+      "cover": "/assets/covers/studypulse.svg",
+      "fileUrl": "",
+      "externalUrl": "",
+      "demoUrl": "",
+      "featured": false,
+      "published": true,
+      "downloads": 3679,
+      "views": 8110,
+      "createdAt": "2025-12-02T12:10:00.000Z",
+      "updatedAt": "2026-09-29T08:05:00.000Z"
+    },
+    {
+      "id": "p_somadhan",
+      "title": "Somadhan — Worksheet Generator",
+      "category": "product",
+      "tagline": "Turn any chapter into a printable problem set with matched answer sheets in under a minute.",
+      "description": "Somadhan means solution — that's the whole idea. Pick a chapter from the built-in biology and chemistry map, choose how many questions and what difficulty, and it builds a clean printable worksheet plus an answer sheet.\n\nIt draws from a curated bank of 6,000+ items so students can't simply copy a friend's sheet. Great for tutors who run weekly tests.",
+      "features": [
+        "6,000+ curated questions with answer keys",
+        "Difficulty mixer from easy to olympiad level",
+        "Print-ready worksheet + answer sheet PDF",
+        "Unlimited generations for your own batches"
+      ],
+      "tags": [
+        "Teaching",
+        "Worksheet",
+        "Automation"
+      ],
+      "price": 299,
+      "priceLabel": "",
+      "version": "1.0.2",
+      "fileType": "Web app + PDF",
+      "fileSize": "Cloud access",
+      "cover": "/assets/covers/somadhan.svg",
+      "fileUrl": "",
+      "externalUrl": "",
+      "demoUrl": "",
+      "featured": false,
+      "published": true,
+      "downloads": 241,
+      "views": 1104,
+      "createdAt": "2026-05-22T06:40:00.000Z",
+      "updatedAt": "2026-09-05T13:25:00.000Z"
+    },
+    {
+      "id": "p_ops_kit",
+      "title": "Community Ops Kit",
+      "category": "software",
+      "tagline": "Templates, automations and SOPs for running a 10k+ member online education community.",
+      "description": "This is the operating system I used to run 30-person volunteer squads serving 200,000+ students. It is a folder of battle-tested assets, not theory.\n\nInside: onboarding flows, moderation SOPs, weekly content calendars, volunteer scorecards, and Google Sheets automations that post to Telegram on a schedule.",
+      "features": [
+        "18 ready-to-use SOPs and checklists",
+        "Notion community dashboard template",
+        "Google Sheets + Telegram automation recipes",
+        "Volunteer scorecard and retention tracker"
+      ],
+      "tags": [
+        "Community",
+        "Notion",
+        "Operations",
+        "Templates"
+      ],
+      "price": 0,
+      "priceLabel": "Free",
+      "version": "2026 Edition",
+      "fileType": "ZIP (Notion + Sheets)",
+      "fileSize": "12 MB",
+      "cover": "/assets/covers/opskit.svg",
+      "fileUrl": "",
+      "externalUrl": "",
+      "demoUrl": "",
+      "featured": false,
+      "published": true,
+      "downloads": 903,
+      "views": 2440,
+      "createdAt": "2026-03-16T15:00:00.000Z",
+      "updatedAt": "2026-07-21T10:45:00.000Z"
+    }
+  ]
+}

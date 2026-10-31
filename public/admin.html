@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Upload hub — Touhid Shakib</title>
+  <meta name="theme-color" content="#06070d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b7bff'/%3E%3Cstop offset='1' stop-color='%232fd4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='%23090b13'%3ETS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ============ Login ============ -->
+  <div class="auth-wrap" id="auth-view" hidden>
+    <div class="auth-card">
+      <div class="auth-head">
+        <span class="brand-mark">TS</span>
+        <h1>Upload hub</h1>
+        <p>Sign in to publish products, software, courses and APKs.</p>
+      </div>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="login-user">Username</label>
+          <input class="input" id="login-user" name="username" value="admin" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="login-pass">Password</label>
+          <input class="input" id="login-pass" name="password" type="password" autocomplete="current-password" placeholder="Your password" required>
+        </div>
+        <div class="form-error" id="login-error"></div>
+        <button class="btn btn-primary btn-block" type="submit" id="login-submit">Sign in</button>
+      </form>
+      <p class="auth-foot">This page is not indexed. <a href="/">Back to the storefront</a></p>
+    </div>
+  </div>
+
+  <!-- ============ App ============ -->
+  <div class="admin-shell" id="app-view" hidden>
+    <aside class="admin-sidebar" data-sidebar>
+      <a class="side-brand" href="/">
+        <span class="brand-mark">TS</span>
+        <span>Touhid Shakib<small>Upload hub</small></span>
+      </a>
+      <nav class="side-nav" aria-label="Admin sections">
+        <button class="side-link is-active" type="button" data-nav="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg>
+          Dashboard
+        </button>
+        <button class="side-link" type="button" data-nav="products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8.2v7.6a2 2 0 0 1-1 1.74l-7 3.9a2 2 0 0 1-2 0l-7-3.9A2 2 0 0 1 3 15.8V8.2a2 2 0 0 1 1-1.74l7-3.9a2 2 0 0 1 2 0l7 3.9A2 2 0 0 1 21 8.2z"/><path d="M3.4 7.2L12 12l8.6-4.8"/><path d="M12 21.6V12"/></svg>
+          My products
+          <span class="count" id="nav-count">0</span>
+        </button>
+        <button class="side-link" type="button" data-nav="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.7 8a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V2a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H22a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>
+          Settings
+        </button>
+      </nav>
+
+      <div class="side-foot">
+        <div class="side-user">
+          <span class="avatar" id="user-avatar">TS</span>
+          <div>
+            <b id="side-user">admin</b>
+            <span>Site owner</span>
+          </div>
+        </div>
+        <div class="side-actions">
+          <button class="icon-btn" data-theme-toggle type="button" aria-label="Toggle theme"></button>
+          <a class="icon-btn" href="/" target="_blank" rel="noopener" aria-label="Open storefront">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>
+          </a>
+          <button class="icon-btn" type="button" id="logout-btn" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 8l-4 4 4 4"/><path d="M6 12h9"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div style="display:flex;align-items:center;gap:0.8rem;">
+          <button class="icon-btn mobile-side-toggle" type="button" data-side-toggle aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          </button>
+          <div>
+            <h1 id="view-title">Dashboard</h1>
+            <p id="view-sub">A quick look at what's live on your shelf.</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-sm" href="/" target="_blank" rel="noopener">View storefront</a>
+          <button class="btn btn-primary btn-sm" type="button" data-new-product>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            New product
+          </button>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <section class="view is-active" id="view-dashboard">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-top"><span class="label">Published</span><span class="stat-icon" data-icon="box"></span></div>
+            <b id="kpi-products">—</b>
+            <span class="sub">items visible to visitors</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-top"><span class="label">Downloads</span><span class="stat-icon" data-icon="download"></span></div>
+            <b id="kpi-downloads">—</b>
+            <span class="sub">all-time file downloads</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-top"><span class="label">Views</span><span class="stat-icon" data-icon="eye"></span></div>
+            <b id="kpi-views">—</b>
+            <span class="sub">product page visits</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-top"><span class="label">Drafts</span><span class="stat-icon" data-icon="file"></span></div>
+            <b id="kpi-drafts">—</b>
+            <span class="sub">hidden until you publish</span>
+          </div>
+        </div>
+
+        <div class="dash-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Recently added</h2>
+                <p>Your five newest uploads</p>
+              </div>
+              <button class="btn btn-ghost btn-sm" type="button" data-goto="products">Manage all</button>
+            </div>
+            <div class="table-wrap">
+              <table class="data">
+                <thead>
+                  <tr><th>Product</th><th>Category</th><th>Status</th><th>Downloads</th><th></th></tr>
+                </thead>
+                <tbody id="recent-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <div class="panel">
+              <div class="panel-head"><div><h2>By category</h2><p>How the shelf is balanced</p></div></div>
+              <div class="panel-body">
+                <div class="breakdown" id="category-breakdown"></div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-head"><div><h2>Quick actions</h2></div></div>
+              <div class="panel-body">
+                <div class="quick-actions">
+                  <button class="quick-action" type="button" data-new-product>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                    Upload a new product <span>→</span>
+                  </button>
+                  <button class="quick-action" type="button" data-goto="settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3"/><path d="M12 19v3"/><path d="M2 12h3"/><path d="M19 12h3"/></svg>
+                    Edit site details <span>→</span>
+                  </button>
+                  <a class="quick-action" href="/api/admin/backup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+                    Download a backup <span>→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section class="view" id="view-products">
+        <div class="panel">
+          <div class="list-toolbar">
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input id="admin-search" type="search" placeholder="Search your products…" aria-label="Search products" autocomplete="off">
+            </div>
+            <select class="select" id="admin-filter" style="width:auto;padding-block:0.55rem;" aria-label="Filter by category">
+              <option value="all">All categories</option>
+              <option value="product">Products</option>
+              <option value="software">Software</option>
+              <option value="course">Courses</option>
+              <option value="apk">APK &amp; Apps</option>
+            </select>
+            <span class="mono" style="margin-left:auto;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted-2);" id="table-count"></span>
+          </div>
+          <div class="table-wrap">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th>Product</th><th>Category</th><th>Price</th><th>Status</th><th>Downloads</th><th style="text-align:right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="products-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section class="view" id="view-settings">
+        <div class="settings-grid">
+          <div class="panel full">
+            <div class="panel-head">
+              <div><h2>Storefront details</h2><p>Text and links shown to visitors on the public site</p></div>
+            </div>
+            <div class="panel-body">
+              <form class="form-grid" id="settings-form">
+                <div class="field-row">
+                  <div class="field">
+                    <label for="set-siteName">Site name</label>
+                    <input class="input" id="set-siteName" name="siteName" placeholder="Touhid Shakib">
+                  </div>
+                  <div class="field">
+                    <label for="set-currency">Currency symbol</label>
+                    <input class="input" id="set-currency" name="currency" placeholder="৳" maxlength="4">
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="set-heroTitle">Hero headline</label>
+                    <input class="input" id="set-heroTitle" name="heroTitle" placeholder="Real products. Real problems solved.">
+                  </div>
+                  <div class="field">
+                    <label for="set-siteTagline">Short tagline</label>
+                    <input class="input" id="set-siteTagline" name="siteTagline" placeholder="Products, software & courses that solve real problems">
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="set-heroSubtitle">Hero paragraph</label>
+                  <textarea class="textarea" id="set-heroSubtitle" name="heroSubtitle" rows="3" placeholder="One or two sentences about what you build."></textarea>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="set-contactEmail">Contact email</label>
+                    <input class="input" id="set-contactEmail" name="contactEmail" type="email" placeholder="you@example.com">
+                  </div>
+                  <div class="field">
+                    <label for="set-whatsapp">WhatsApp number (with country code)</label>
+                    <input class="input" id="set-whatsapp" name="whatsapp" placeholder="+8801XXXXXXXXX">
+                  </div>
+                </div>
+                <div class="field-row-3">
+                  <div class="field">
+                    <label for="set-facebook">Facebook URL</label>
+                    <input class="input" id="set-facebook" name="facebook" placeholder="https://facebook.com/…">
+                  </div>
+                  <div class="field">
+                    <label for="set-youtube">YouTube URL</label>
+                    <input class="input" id="set-youtube" name="youtube" placeholder="https://youtube.com/@…">
+                  </div>
+                  <div class="field">
+                    <label for="set-github">GitHub / website URL</label>
+                    <input class="input" id="set-github" name="github" placeholder="https://github.com/…">
+                  </div>
+                </div>
+                <div style="display:flex;justify-content:flex-end;gap:0.6rem;">
+                  <button class="btn btn-primary" type="submit">Save details</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><div><h2>Password</h2><p>Change the password used to sign in here</p></div></div>
+            <div class="panel-body">
+              <form class="form-grid" id="password-form">
+                <div class="field">
+                  <label for="pw-current">Current password</label>
+                  <input class="input" id="pw-current" name="currentPassword" type="password" autocomplete="current-password" required>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="pw-new">New password</label>
+                    <input class="input" id="pw-new" name="newPassword" type="password" autocomplete="new-password" required minlength="6">
+                  </div>
+                  <div class="field">
+                    <label for="pw-confirm">Confirm new password</label>
+                    <input class="input" id="pw-confirm" name="confirmPassword" type="password" autocomplete="new-password" required minlength="6">
+                  </div>
+                </div>
+                <div class="form-error" id="password-error"></div>
+                <div style="display:flex;justify-content:flex-end;">
+                  <button class="btn btn-primary" type="submit">Update password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><div><h2>Backup &amp; storage</h2><p>Keep a copy of your catalogue</p></div></div>
+            <div class="panel-body">
+              <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:1.1rem;">
+                Downloading a backup saves every product record (titles, descriptions, prices, links) as a JSON file.
+                Uploaded images and files live in the <span class="mono">uploads/</span> folder on the server.
+              </p>
+              <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+                <a class="btn btn-sm" href="/api/admin/backup">Download backup</a>
+                <a class="btn btn-sm btn-ghost" href="/" target="_blank" rel="noopener">Open storefront</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ============ Product editor ============ -->
+  <div class="modal" id="editor-modal" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <h2 id="editor-title">New product</h2>
+          <p id="editor-sub">Add an item to your shelf. Only the title and tagline are required.</p>
+        </div>
+        <button class="icon-btn" type="button" data-close-editor aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+        </button>
+      </div>
+
+      <form id="product-form">
+        <div class="modal-body">
+          <div class="form-error" id="editor-error"></div>
+
+          <div class="form-section-title">Cover image</div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-start;">
+            <div class="dropzone" id="cover-drop" style="flex:1;min-width:240px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 17l4.5-4.5 3 3L15 12l5 5"/></svg>
+              <strong>Drop a cover image here</strong>
+              <span>JPG, PNG, WEBP or SVG · 3:2 looks best · up to 512 MB</span>
+              <input type="file" name="cover" id="cover-input" accept="image/*">
+            </div>
+            <div class="cover-preview" id="cover-preview" hidden>
+              <img alt="Cover preview" id="cover-preview-img">
+              <button class="remove" type="button" id="cover-remove" aria-label="Remove cover">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-section-title">The basics</div>
+          <div class="field">
+            <label for="f-title">Product title *</label>
+            <input class="input" id="f-title" name="title" placeholder="e.g. BioNest — HSC Biology Question Bank" maxlength="160" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-category">Category</label>
+              <select class="select" id="f-category" name="category">
+                <option value="product">Product — digital product / kit</option>
+                <option value="software">Software — app / tool / script</option>
+                <option value="course">Course — lessons / training</option>
+                <option value="apk">APK — Android app</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-version">Version / batch</label>
+              <input class="input" id="f-version" name="version" placeholder="e.g. 1.2.0 or 2026 batch">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-tagline">Short tagline *</label>
+            <input class="input" id="f-tagline" name="tagline" placeholder="One line that explains the problem it solves" maxlength="300" required>
+          </div>
+          <div class="field">
+            <label for="f-description">Full description</label>
+            <textarea class="textarea" id="f-description" name="description" rows="6" placeholder="What it is, who it is for, and how it solves the problem. Blank lines become paragraphs."></textarea>
+          </div>
+          <div class="field">
+            <label for="f-features">What's inside — one per line</label>
+            <textarea class="textarea" id="f-features" name="features" rows="4" placeholder="12,000+ questions with answers&#10;Chapter-wise filters&#10;Lifetime updates"></textarea>
+          </div>
+
+          <div class="form-section-title">Pricing &amp; delivery</div>
+          <div class="field-row-3">
+            <div class="field">
+              <label for="f-price">Price</label>
+              <input class="input" id="f-price" name="price" type="number" min="0" step="1" placeholder="0 for free">
+            </div>
+            <div class="field">
+              <label for="f-priceLabel">Price label (optional)</label>
+              <input class="input" id="f-priceLabel" name="priceLabel" placeholder="Free / Coming soon">
+            </div>
+            <div class="field">
+              <label for="f-fileType">File format</label>
+              <input class="input" id="f-fileType" name="fileType" placeholder="PDF / ZIP / APK">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-fileSize">Display size</label>
+              <input class="input" id="f-fileSize" name="fileSize" placeholder="e.g. 48 MB (auto-filled)">
+            </div>
+            <div class="field">
+              <label for="f-demoUrl">Demo / preview URL</label>
+              <input class="input" id="f-demoUrl" name="demoUrl" placeholder="https://…">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Product file — upload it here</label>
+            <div class="dropzone" id="file-drop" style="padding:1.1rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 20h16"/></svg>
+              <strong>Drop the deliverable here</strong>
+              <span>ZIP, PDF, APK, MP4, docs… up to 512 MB</span>
+              <input type="file" name="file" id="file-input">
+            </div>
+            <div id="file-selected" style="display:none;grid-column:1/-1;">
+              <div class="file-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                <div><b id="file-name">file.zip</b><span id="file-size">—</span></div>
+                <button class="remove-file" type="button" id="file-remove" aria-label="Remove file">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="progress" id="upload-progress"><i></i></div>
+          </div>
+
+          <div class="field">
+            <label for="f-externalUrl">…or link an external download</label>
+            <input class="input" id="f-externalUrl" name="externalUrl" placeholder="https://drive.google.com/… or GitHub release">
+            <span class="hint">Use this for very large files or files hosted elsewhere. Uploading a file above takes priority.</span>
+          </div>
+
+          <div class="form-section-title">Visibility</div>
+          <div class="field">
+            <label for="f-tags">Tags — comma separated</label>
+            <input class="input" id="f-tags" name="tags" placeholder="HSC, Biology, PDF">
+          </div>
+          <div class="switch-row">
+            <label class="switch">
+              <input type="checkbox" id="f-featured" name="featured">
+              <span class="track"></span>
+              Feature on the home page
+            </label>
+            <label class="switch">
+              <input type="checkbox" id="f-published" name="published" checked>
+              <span class="track"></span>
+              Published (visible to visitors)
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-foot">
+          <button class="btn btn-ghost" type="button" data-close-editor>Cancel</button>
+          <div class="foot-actions">
+            <button class="btn btn-primary" type="submit" id="save-product">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              Save product
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ Confirm ============ -->
+  <div class="modal" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-card small">
+      <div class="modal-head">
+        <div><h2 id="confirm-title">Delete this product?</h2></div>
+        <button class="icon-btn" type="button" data-close-confirm aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="confirm-body" id="confirm-text"></div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost" type="button" data-close-confirm>Keep it</button>
+        <div class="foot-actions">
+          <button class="btn btn-danger" type="button" id="confirm-yes">Delete permanently</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

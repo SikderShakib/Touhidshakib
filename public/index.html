@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touhid Shakib — Products, Software, Courses & APK</title>
+  <meta name="description" content="A personal shelf of practical digital products, software, courses and Android apps built by Sikder Touhid Shakib — tools that solve real problems for students, creators and small businesses.">
+  <meta name="theme-color" content="#06070d">
+  <meta property="og:title" content="Touhid Shakib — Products that solve real problems">
+  <meta property="og:description" content="Digital products, software, complete courses and APK downloads — built, tested and documented.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b7bff'/%3E%3Cstop offset='1' stop-color='%232fd4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='%23090b13'%3ETS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="/" aria-label="Touhid Shakib home">
+        <span class="brand-mark">TS</span>
+        <span>Touhid Shakib<small>Digital maker</small></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/" aria-current="page">Home</a>
+        <a href="#browse" data-cat-link="all">All products</a>
+        <a href="#browse" data-cat-link="software">Software</a>
+        <a href="#browse" data-cat-link="course">Courses</a>
+        <a href="#browse" data-cat-link="apk">APK</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Toggle theme"></button>
+        <a class="btn btn-ghost btn-sm" href="/cv.html">
+          <span class="btn-admin-label">My CV</span>
+        </a>
+        <a class="btn btn-primary btn-sm" href="/admin.html">
+          <span class="btn-admin-label">Upload</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 20h16"/></svg>
+        </a>
+        <button class="icon-btn mobile-toggle" data-menu-toggle type="button" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="mobile-menu" data-mobile-menu>
+        <a href="/">Home</a>
+        <a href="#browse">All products</a>
+        <a href="#browse" data-cat-link="software">Software</a>
+        <a href="#browse" data-cat-link="course">Courses</a>
+        <a href="#browse" data-cat-link="apk">APK &amp; apps</a>
+        <a href="/cv.html">My CV</a>
+        <a href="/admin.html">Upload / manage</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Independent maker · Dhaka, Bangladesh</span>
+          <h1>Real products.<br><span class="grad-text">Real problems</span> solved.</h1>
+          <p class="hero-sub" id="hero-sub">
+            I build practical tools for students, creators and small businesses — study products, desktop
+            software, full courses and Android apps. Pick one, download it, and get to work.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#browse">
+              Browse the shelf
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn" href="#categories">What I make</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <span class="stat-num" id="stat-products">—</span>
+              <span class="stat-label">Products live</span>
+            </div>
+            <div>
+              <span class="stat-num" id="stat-downloads">—</span>
+              <span class="stat-label">Downloads</span>
+            </div>
+            <div>
+              <span class="stat-num" id="stat-free">—</span>
+              <span class="stat-label">Free to grab</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-glow"></div>
+          <div class="hero-ring"></div>
+          <div class="hero-card hero-card-main">
+            <img src="/assets/covers/bionest.svg" alt="">
+          </div>
+          <div class="hero-card hero-card-back">
+            <img src="/assets/covers/rankradar.svg" alt="">
+          </div>
+          <div class="hero-card-pill free">
+            <span class="dot"></span> Free tools included
+          </div>
+          <div class="hero-card-pill dl">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+            <span id="hero-downloads">Instant downloads</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>Digital products</span><span>Problem solvers</span><span>Software</span><span>Courses</span>
+            <span>Android APK</span><span>Templates</span><span>Free tools</span>
+            <span>Digital products</span><span>Problem solvers</span><span>Software</span><span>Courses</span>
+            <span>Android APK</span><span>Templates</span><span>Free tools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Four shelves</span>
+            <h2 class="section-title">Everything I build, in one place</h2>
+            <p class="section-sub">Every item is something I actually use myself — a study pack, a script that saves hours, a course that took a batch of students to results, or an app small enough for a budget phone.</p>
+          </div>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <!-- Browse -->
+    <section class="section" id="browse" style="padding-top:1rem;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">The shelf</span>
+            <h2 class="section-title">Browse everything</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="/admin.html">
+            Upload a product
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 20h16"/></svg>
+          </a>
+        </div>
+
+        <div class="toolbar">
+          <div class="filter-chips" id="filter-chips" role="group" aria-label="Filter by category"></div>
+          <div class="search-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input id="search-input" type="search" placeholder="Search products, tags, software…" aria-label="Search products" autocomplete="off">
+          </div>
+          <select class="sort-select" id="sort-select" aria-label="Sort products">
+            <option value="newest">Newest first</option>
+            <option value="downloads">Most downloaded</option>
+            <option value="az">A – Z</option>
+          </select>
+        </div>
+
+        <p class="result-count" id="result-count">Loading the shelf…</p>
+        <div class="product-grid" id="product-grid"></div>
+        <div id="grid-footer" style="margin-top:2rem;text-align:center;"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <span class="eyebrow">Have a problem worth solving?</span>
+          <h2>Tell me the problem. I'll build the tool.</h2>
+          <p>Need a custom study pack, an internal automation, a landing page or an Android utility for your own students? I take on a small number of custom builds each month.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" id="cta-email" href="mailto:touhidshakib4@gmail.com">
+              Start a conversation
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn" id="cta-whatsapp" href="#" hidden>Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <span class="brand-mark">TS</span>
+            <span>Sikder Touhid Shakib<small>Digital maker</small></span>
+          </a>
+          <p>Zoology graduate, community builder and maker of small, useful digital things. Everything on this shelf was built to remove a real, annoying problem.</p>
+          <div class="social-row" id="footer-social"></div>
+        </div>
+        <div class="footer-col">
+          <h4>Shelf</h4>
+          <a href="#browse" data-cat-link="product">Products</a>
+          <a href="#browse" data-cat-link="software">Software</a>
+          <a href="#browse" data-cat-link="course">Courses</a>
+          <a href="#browse" data-cat-link="apk">APK &amp; apps</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/cv.html">My CV</a>
+          <a href="/admin.html">Upload hub</a>
+          <a href="#categories">What I make</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <a id="footer-email" href="mailto:touhidshakib4@gmail.com">touhidshakib4@gmail.com</a>
+          <a id="footer-whatsapp" href="#" hidden>WhatsApp</a>
+          <a href="https://github.com/SikderShakib" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Sikder Touhid Shakib. Built with care in Dhaka.</span>
+        <span class="mono" style="font-size:0.72rem;">Digital products · Software · Courses · APK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/store.js"></script>
+</body>
+</html>
