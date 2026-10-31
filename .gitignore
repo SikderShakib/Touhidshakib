@@ -1,0 +1,12 @@
+node_modules/
+npm-debug.log*
+.DS_Store
+
+# Runtime data (catalogue + uploaded files).
+# data/db.json is created from data/seed.json on first run.
+data/db.json
+uploads/*
+!uploads/.gitkeep
+
+.env
+.env.*

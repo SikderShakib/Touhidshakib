@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Community Ops Kit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101c46" />
+      <stop offset="0.62" stop-color="#0b0d16" />
+      <stop offset="1" stop-color="#06070d" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.36" r="0.62">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#a5b4fc" />
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#38bdf8" fill-opacity="0.28" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect width="1200" height="800" fill="url(#dots)" />
+  <rect width="1200" height="800" fill="url(#glow)" />
+  
+        <g opacity="0.8" stroke="#38bdf8" fill="none" stroke-width="1.8">
+          <circle cx="700" cy="250" r="16" fill="#38bdf8" fill-opacity="0.2" /><circle cx="900" cy="180" r="16" fill="#38bdf8" fill-opacity="0.2" /><circle cx="1050" cy="330" r="16" fill="#38bdf8" fill-opacity="0.2" /><circle cx="840" cy="400" r="16" fill="#38bdf8" fill-opacity="0.2" /><circle cx="980" cy="520" r="16" fill="#38bdf8" fill-opacity="0.2" /><circle cx="740" cy="540" r="16" fill="#38bdf8" fill-opacity="0.2" />
+          <path d="M700 250 L900 180 L1050 330 L980 520 L840 400 L740 540 Z" stroke-opacity="0.45" />
+          <path d="M700 250 L840 400 M900 180 L840 400 M1050 330 L840 400 M980 520 L840 400" stroke-opacity="0.3" />
+          <circle cx="840" cy="400" r="34" fill="#a5b4fc" fill-opacity="0.22" stroke="#a5b4fc" />
+        </g>
+
+  <g transform="translate(72 96)">
+    <rect x="0" y="0" width="172" height="40" rx="20" fill="#38bdf8" fill-opacity="0.16" stroke="#38bdf8" stroke-opacity="0.5" />
+    <text x="86" y="26" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif"
+          font-size="16" font-weight="700" letter-spacing="4" fill="#a5b4fc">SOFTWARE</text>
+  </g>
+
+  <text x="72" y="600" font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800"
+        letter-spacing="-2.5" fill="url(#title)">Community Ops Kit</text>
+  <text x="74" y="654" font-family="'Segoe UI', Arial, sans-serif" font-size="27" font-weight="400"
+        letter-spacing="0.4" fill="#c7cee0" fill-opacity="0.82">Templates & automations</text>
+
+  <g transform="translate(72 716)" opacity="0.75">
+    <rect width="54" height="3" rx="1.5" fill="#38bdf8" />
+    <text x="72" y="8" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="600"
+          letter-spacing="3.6" fill="#e6ebf7" fill-opacity="0.75">TOUHID SHAKIB</text>
+  </g>
+</svg>
