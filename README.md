@@ -17,7 +17,8 @@ Personal portfolio site (single-file `index.html`), plus my CV.
 | File | Purpose |
 | --- | --- |
 | `index.html` | The whole portfolio (HTML + CSS + JS, no build step) |
-| `assets/profile.jpg` | Profile photo |
+| `assets/profile.png` | Profile photo (real PNG, 333 KB) |
+| `assets/profile.webp` | Same photo, 32 KB — served to modern phones |
 | `assets/Touhid_Shakib_CV.pdf` | Downloadable CV |
 
 ## Local preview
@@ -26,3 +27,9 @@ Personal portfolio site (single-file `index.html`), plus my CV.
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
+
+## Mobile notes
+
+- Photo loads from `profile.webp` (32 KB) on phones via `<picture>`, PNG as fallback.
+- Sticky WhatsApp / Hire-me bar on screens under 768px.
+- No horizontal scrolling: project grid uses `min(320px, 100%)`, drawer scrolls, URLs wrap.
